@@ -10,20 +10,14 @@
 
     <link rel="stylesheet" href="ianstyle.css">
 
-    <input id="care-a-lot time">
-    <table>
-      <tr>
-        <td class="outline">
-        <div class="clock" id="care-a-lot time"></div>
-        </td>
-      </tr>
-    </table>
+    <input>
+    <div class="clock" id="care-a-lot time"></div>
   </input>
     <button onclick="buttonCopyText()">Copy text</button>
 
 	<script>
   function buttonCopyText() {
-  var copyText = document.getElementById("myInput");
+  var copyText = document.getElementById("care-a-lot time");
   copyText.select();
   copyText.setSelectionRange(0, 99999)
   document.execCommand("copy");
@@ -34,7 +28,7 @@
   {
 var d = new Date();
 var n = d.toISOString();
-document.getElementById("demo").innerHTML = n;
+document.getElementById("care-a-lot time").innerHTML = n;
 t=setTimeout(function(){startTime()},33);
 }
 
@@ -56,16 +50,16 @@ function checkTime(i)
 </center>
 <hr>
 <h2>ISO-8601 TIMESTAMP:</h2>
-<table>
+<!--<table>
   <tr>
     <td class="outline">
     <div class="clock" id="care-a-lot time"></div>
     </td>
   </tr>
-</table>
+</table>-->
 
 <button onclick="buttonCopyText()">message of current time</button>
-<p id="demo"></p>
+<p id="care-a-lot time"></p>
 
 </body>
 
