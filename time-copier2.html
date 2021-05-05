@@ -10,36 +10,26 @@
 
     <link rel="stylesheet" href="ianstyle.css">
 
-    <input>
-    <div class="clock" id="timeDateCopier"></div>
-  </input>
+    <input type=text id="caltime" value="asdf"></input>
     <button onclick="buttonCopyText()">Copy text</button>
 
-	<script>
+<script>
   function buttonCopyText() {
-  var copyText = document.getElementById("timeDateCopier");
+  var copyText = document.getElementById("caltime");
   copyText.select();
   copyText.setSelectionRange(0, 99999)
   document.execCommand("copy");
   alert("Copied the text: " + copyText.value);
 }
 
-	function startTime()
+function startTime()
   {
 var d = new Date();
 var n = d.toISOString();
-document.getElementById("timeDateCopier").innerHTML = n;
+document.getElementById("caltime").value = n;
 t=setTimeout(function(){startTime()},888);
 }
 
-function checkTime(i)
-  {
-  if (i<10)
-    {
-    i="0" + i;
-    }
-  return i;
-  }
 </script>
 
 </head>
@@ -50,13 +40,9 @@ function checkTime(i)
 </center>
 <hr>
 <h2>ISO-8601 TIMESTAMP:</h2>
-<!--<table>
-  <tr>
-    <td class="outline">
-    <div class="clock" id="care-a-lot time"></div>
-    </td>
-  </tr>
-</table>-->
+
+
+<button onclick="buttonCopyText()">message of current time</button>
 
 </body>
 
