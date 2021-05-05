@@ -25,10 +25,47 @@
 function startTime()
   {
 var d = new Date();
-var n = d.toISOString();
-document.getElementById("caltime").value = n;
-t=setTimeout(function(){startTime()},888);
+var f = "0";
+var y = d.getFullYear();
+var mm = d.getMonth()+1;
+var dd = d.getDate();
+var h = d.getHours();
+var m = d.getMinutes();
+var s = d.getSeconds();
+
+if (mm < 10) {
+var currMonth = "0"+mm;
+} else {
+var currMonth = mm;
 }
+
+if (dd < 10) {
+var currDay = "0"+dd;
+} else {
+var currDay = dd;
+}
+
+if (h < 10) {
+var currHour = "0"+h;
+} else {
+var currHour = h;
+}
+
+if (m < 10) {
+var currMinute = "0"+m;
+} else {
+var currMinute = m;
+}
+
+if (s < 10) {
+var currSecond = "0"+s;
+} else {
+var currSecond = s;
+}
+document.getElementById("caltime").value = y+"-"+currMonth+"-"+currDay+"T"+currHour+":"+currMinute+":"+currSecond+"Z";
+t=setTimeout(function(){startTime()},100);
+}
+
 
 </script>
 
